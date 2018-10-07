@@ -20,17 +20,17 @@ $ npm install --save @ionic/storage
 ****** CAMERA + FILE STORAGE ******
 
 $ npm install --save @ionic-native/camera @ionic-native/file @ionic-native/file-path @ionic-native/transfer <br />
-$ ionic cordova plugin add cordova-plugin-camera --save
-$ ionic cordova plugin add cordova-plugin-file --save
-$ ionic cordova plugin add cordova-plugin-file-transfer --save
-$ ionic cordova plugin add cordova-plugin-filepath --save
+$ ionic cordova plugin add cordova-plugin-camera --save <br />
+$ ionic cordova plugin add cordova-plugin-file --save <br />
+$ ionic cordova plugin add cordova-plugin-file-transfer --save <br />
+$ ionic cordova plugin add cordova-plugin-filepath --save <br />
 
 app.module
 
-import { File } from '@ionic-native/file';
-import { Transfer } from '@ionic-native/transfer';
-import { FilePath } from '@ionic-native/file-path';
-import { Camera } from '@ionic-native/camera';
+import { File } from '@ionic-native/file'; <br />
+import { Transfer } from '@ionic-native/transfer'; <br />
+import { FilePath } from '@ionic-native/file-path'; <br />
+import { Camera } from '@ionic-native/camera'; <br />
 
 providers: [
     StatusBar,
