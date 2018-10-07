@@ -32,15 +32,15 @@ import { Transfer } from '@ionic-native/transfer'; <br />
 import { FilePath } from '@ionic-native/file-path'; <br />
 import { Camera } from '@ionic-native/camera'; <br />
 
-providers: [
-    StatusBar,
-    SplashScreen,
-    File,
-    Transfer,
-    Camera,
-    FilePath,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+providers: [ <br />
+    StatusBar, <br />
+    SplashScreen, <br />
+    File, <br />
+    Transfer, <br />
+    Camera, <br />
+    FilePath, <br />
+    {provide: ErrorHandler, useClass: IonicErrorHandler} <br />
+  ] <br />
 
 ****** LOGIN ******
 
