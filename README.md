@@ -19,7 +19,7 @@ $ npm install --save @ionic/storage
 
 ****** CAMERA + FILE STORAGE ******
 
-$ npm install --save @ionic-native/camera @ionic-native/file @ionic-native/file-path @ionic-native/transfer
+$ npm install --save @ionic-native/camera @ionic-native/file @ionic-native/file-path @ionic-native/transfer <br />
 $ ionic cordova plugin add cordova-plugin-camera --save
 $ ionic cordova plugin add cordova-plugin-file --save
 $ ionic cordova plugin add cordova-plugin-file-transfer --save
