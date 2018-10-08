@@ -1,61 +1,28 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
  
-export class User {
-  name: string;
-  email: string;
- 
-  constructor(name: string, email: string) {
-    this.name = name;
-    this.email = email;
-  }
-}
+let apiUrl = 'http://youraddresshere/api.php';
 
 @Injectable()
 export class AuthServiceProvider {
 
-  currentUser: User;
-  constructor() {
+  constructor(public http: Http) {
     console.log('Hello AuthServiceProvider Provider');
   }
 
-  public login(credentials) {
-    if (credentials.email === null || credentials.password === null) {
-      return Observable.throw("Please insert credentials");
-    } else {
-      return Observable.create(observer => {
-        
-        let access = (credentials.password === "pass" && credentials.email === "email");
-        this.currentUser = new User('Viktor', 'viktor@cw.com');
-        observer.next(access);
-        observer.complete();
+  postData(credentials, type){
+
+    return new Promise((resolve, reject) =>{
+      this.http.post(apiUrl+'?type='+type, JSON.stringify({username: credentials.username, password: credentials.password})).
+      subscribe(res =>{
+        resolve(res.json());
+      }, (err) =>{
+        reject(err);
       });
-    }
-  }
- 
-  public register(credentials) {
-    if (credentials.email === null || credentials.password === null) {
-      return Observable.throw("Please insert credentials");
-    } else {
-      
-      return Observable.create(observer => {
-        observer.next(true);
-        observer.complete();
-      });
-    }
-  }
- 
-  public getUserInfo() : User {
-    return this.currentUser;
-  }
- 
-  public logout() {
-    return Observable.create(observer => {
-      this.currentUser = null;
-      observer.next(true);
-      observer.complete();
+
     });
+
   }
 
 }
