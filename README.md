@@ -6,7 +6,7 @@ CHANGELOG: <br />
 
 v 0.0.2 <br />
 Changed login logic <br />
-Added php API files <br />
+Added php API files /change the URL on top in auth-service provider file/ <br />
 
 ****** GEOLOCATION PLUGIN ******
 
