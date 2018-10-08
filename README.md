@@ -1,5 +1,12 @@
 # cwapp
 
+CodeWeek Vratsa mobile dev example <br />
+
+CHANGELOG: <br />
+
+v 0.0.2 <br />
+Changed login logic <br />
+Added php API files <br />
 
 ****** GEOLOCATION PLUGIN ******
 
